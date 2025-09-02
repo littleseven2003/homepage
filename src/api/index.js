@@ -59,9 +59,9 @@ export const getHitokoto = async () => {
 //   return await res.json();
 // };
 
-// 获取高德地理位置信息
+// 获取百度地理位置信息
 export const getAdcode = async (key) => {
-  const res = await fetch(`https://api.map.baidu.com/location/ip?ip=&coor=bd09ll&ak=${key}`);
+  const res = await fetch(`https://api.map.baidu.com/location/ip?coor=bd09ll&ak=${key}`);
   return await res.json();
 };
 
@@ -74,7 +74,7 @@ export const getAdcode = async (key) => {
 //   return await res.json();
 // };
 
-// 获取高德地理天气信息
+// 获取百度地理天气信息
 export const getWeather = async (key, city) => {
   const res = await fetch(
     `https://api.map.baidu.com/weather/v1/?district_id=${city}&data_type=all&ak=${key}`,
